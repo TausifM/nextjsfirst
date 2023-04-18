@@ -8,7 +8,7 @@ const Footer = () => {
     <div className="container">
       <div className="row justify-content-between">
         <div className="col-lg-6 col-sm-12">
-            <Link href="/"><Image className="img-fluid mt-5 mb-4" src={IMAGES.BlackLogo} alt="" /></Link>
+            <Link href="/"><Image className="img-fluid mt-5 mb-4" src={IMAGES.FooterLogo} alt="" /></Link>
           <p className="w-lg-75 text-gray">Social media validation business model canvas graphical user
            interface launch party creative facebook iPad twitter.</p>
         </div>

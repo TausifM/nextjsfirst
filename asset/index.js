@@ -1,6 +1,7 @@
 export const IMAGES = {
     HeroImg1: require('./img/hero/hero-bg.png'),
     HeroImg2: require('./img/hero/hero-graphics.png'),
+    FooterLogo: require('./img/Logo2.png'),
     Logo1: require('./img/logos/boldo.png'),
     Logo2: require('./img/logos/presto.png'),
     Services1: require('./img/services/lovelaceclient.JPG'),

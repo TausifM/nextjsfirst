@@ -8,7 +8,7 @@ const Wrapper = (props) => {
         <AnimatedCursor 
           innerSize={20}
           outerSize={30}
-          color="255, 255, 255"
+          color="250, 101, 60"
           outerAlpha={0.2}
           innerScale={0.7}
           outerScale={5}
