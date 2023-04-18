@@ -1,12 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { useRouter } from 'next/router';
 import Logo from "../asset/img/Logo2.png";
 
 const Header = () => {
   const [navbarCollapse, setNavbarCollapse] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-
+  const router = useRouter();
   const handleScroll = () => {
     const scrollTop = window.pageYOffset;
     if (scrollTop > 10) {
@@ -52,33 +53,36 @@ const Header = () => {
         </button>
         <div className={`navbar-collapse ${navbarCollapse ? "" : "collapse"}`} id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto mt-3 mt-lg-0">
-            {/* <li className="nav-item">
-              <Link className={({ isActive }) => isActive ? "nav-link active mt-1" : "nav-link mt-1"}           
-                aria-current="page" href="/">
-                Home
+            <li className="nav-item">
+              <Link aria-current="page" href="/" legacyBehavior>
+                 <a className={router.pathname == "/" ? "nav-link active mt-1" : "nav-link mt-1"}>
+                   Home
+                 </a>
               </Link>
             </li>
             <li className="nav-item">
-            <Link className={({ isActive }) => isActive ? "nav-link active mt-1" : "nav-link mt-1"}           
-                aria-current="page" href="/about">
-                About
+              <Link aria-current="page" href="/about" legacyBehavior>
+                 <a className={router.pathname == "/about" ? "nav-link active mt-1" : "nav-link mt-1"}>
+                   About
+                 </a>
               </Link>
             </li>
             <li className="nav-item">
-              <Link className={({ isActive }) => isActive ? "nav-link active mt-1" : "nav-link mt-1"}           
-                  aria-current="page" href="/contact">
-                  Contact
+              <Link aria-current="page" href="/contact" legacyBehavior>
+                 <a className={router.pathname == "/contact" ? "nav-link active mt-1" : "nav-link mt-1"}>
+                   Contact
+                 </a>
               </Link>
             </li>
             <li className="nav-item mt-2 mt-lg-0">
               <Link
                 className="nav-Link btn btn-light text-black w-md-25 w-50 w-lg-100"
                 aria-current="page"
-                to="#"
+                href="/"
               >
                 Log In
               </Link>
-            </li> */}
+            </li>
           </ul>
         </div>
       </div>
