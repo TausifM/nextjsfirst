@@ -29,7 +29,7 @@ const Review = () => {
     prevEl:".swiper-button-prev"
   }
   return (
-  <section className="bg-dark pt-6">
+  <section className="bg-dark pt-6 border-lg-top">
     <div className="container">
       <div className="col-md-6">
         <h1 className="text-white fs-lg-5 fs-md-3 fs-2">An enterprise template to ramp up your company website</h1>

@@ -4,7 +4,7 @@ import { IMAGES } from "../asset";
 const Informative = () => {
   return (
     <section className="pt-8 pt-lg-0">
-    <div className="container">
+    <div className="container pt-8">
       <div className="d-flex flex-column-reverse flex-lg-row">
         <div className="col-lg-6">
           <h1 className="fs-lg-4 fs-md-3 fs-xl-5 mb-5 text-light">We connect our customers with the best, and help them keep up-and stay open.</h1>

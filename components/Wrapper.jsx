@@ -31,7 +31,7 @@ const Wrapper = (props) => {
           ]}
       />
       <main
-        className="main bg-dark"
+        className="main bg-dark wrapper"
         id="top"
       >
         <Header />

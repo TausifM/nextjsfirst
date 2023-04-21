@@ -8,11 +8,13 @@ import Footer from '../components/Footer'
 import HeroSection from '../components/HeroSection';
 import WebDesignServices from '../components/WebDesignServices';
 import SEOServices from '../components/SEOServices';
-import ServiceDescription from '../components/ServicesDescription';
+// import ServiceDescription from '../components/ServicesDescription';
 import Informative from '../components/Informative';
 import Review from '../components/Review';
 import AccordionSection from '../components/AccordionSection';
 import Blogs from '../components/Blogs';
+import LogoDesign from '../components/LogoDesign';
+import AmazonEbook from '../components/AmazonEbook';
 
 export default function Home() {
   // const progressRef = useRef();
@@ -52,9 +54,11 @@ export default function Home() {
       <HeroSection />
       <WebDesignServices />
       <SEOServices />
-      <ServiceDescription />
+      <LogoDesign />
+      {/* <ServiceDescription /> */}
       <Informative />
       <Review />
+      <AmazonEbook />
       <AccordionSection />
       <Blogs />
     </Wrapper>

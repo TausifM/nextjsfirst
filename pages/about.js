@@ -1,5 +1,4 @@
 import Image from 'next/image';
-// import Link from 'next/link';
 import {IMAGES} from '../asset/index';
 import Footer from '../components/Footer.jsx';
 import Newsletter from '../components/NewsLetter.jsx';
