@@ -12,7 +12,7 @@ const Newsletter = () => {
             <input className="form-control mb-2 border-light fs-1" type="email" placeholder="Your email address" />
             </div>
           <div className="col-auto mt-2 mt-lg-0">
-            <button className="btn btn-success text-dark fs-1">Start now</button>
+            <button className="custom-btn btn-14 fs-1">Start now</button>
             </div>
         </div>
       </div>

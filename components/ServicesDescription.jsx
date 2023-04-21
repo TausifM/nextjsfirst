@@ -6,7 +6,7 @@ const ServiceDescription= () => {
     <section>
     <div className="container">
       <div className="row align-items-center">
-        <div className="col-lg-6 text-center text-lg-start"><Image className="<Image-fluid" src={IMAGES.Offer1} alt="" /></div>
+        <div className="col-lg-6 text-center text-lg-start"><Image className="img-fluid" src={IMAGES.Offer1} alt="" width="auto" height="auto" /></div>
         <div className="col-lg-6">
           <h1 className="fs-xl-5 fs-lg-4 fs-3 text-white">We connect our customers with the best, and help them keep up-and stay open.</h1>
           <ul className="list-unstyled my-xl-5 my-3">

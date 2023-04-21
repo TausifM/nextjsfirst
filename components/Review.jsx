@@ -34,7 +34,7 @@ const Review = () => {
       <div className="col-md-6">
         <h1 className="text-white fs-lg-5 fs-md-3 fs-2">An enterprise template to ramp up your company website</h1>
       </div>
-         <Swiper className="swiper-container swiper-theme mt-7"
+         <Swiper className="swiper-container swiper-theme mt-7 z-index-0"
           slidesPerView={1}
           breakpoints={breakpoints}
           spaceBetween={10}
@@ -50,7 +50,7 @@ const Review = () => {
                 <SwiperSlide className="bg-white p-5 rounded-3 h-auto swiper-slide-duplicate swiper-slide-duplicate-next" role="group" aria-label="2 / 4" style={{width: "362.667px", marginRight: "40px"}} data-swiper-slide-index="1">
                   <div className="d-flex flex-column justify-content-between h-100">
                     <h4 className="text-black">“Learning curve infrastructure value proposition advisor strategy user experience hypotheses investor.”</h4>
-                    <div className="d-flex align-items-center gap-3 mt-5"><Image src={IMAGES.Review2} alt="" />
+                    <div className="d-flex align-items-center gap-3 mt-5"><Image src={IMAGES.Review2} alt="" width="auto" height="auto" className="review-img"/>
                       <div className="text-black">
                         <p className="mb-0 fw-bold text-dark">Severus Snape</p><small>Manager @ Slytherin</small>
                       </div>
@@ -60,17 +60,18 @@ const Review = () => {
                 <SwiperSlide className="bg-white p-5 rounded-3 h-auto swiper-slide-duplicate" role="group" aria-label="3 / 4" style={{width: "362.667px", marginRight: "40px"}}>
                   <div className="d-flex flex-column justify-content-between h-100">
                     <h4 className="text-black">“Release facebook responsive web design business model canvas seed money monetization.”</h4>
-                    <div className="d-flex align-items-center gap-3 mt-5"><Image src={IMAGES.Review1} alt="" />
+                    <div className="d-flex align-items-center gap-3 mt-5"><Image src={IMAGES.Review1} alt="" width="auto" height="auto" className="review-img" />
                       <div className="text-black">
                         <p className="mb-0 fw-bold text-dark">Harry Potter</p><small>Team Leader @ Gryffindor</small>
                       </div>
                     </div>
                   </div>
                 </SwiperSlide>
-                <SwiperSlide className="bg-white p-5 rounded-3 h-auto swiper-slide-duplicate swiper-slide-prev" role="group" aria-label="4 / 4" style={{width: "362.667px", marginRight: "40px"}} data-swiper-slide-index="3">
+                <SwiperSlide className="bg-white p-5 rounded-3 h-auto swiper-slide-duplicate swiper-slide-prev" role="group" aria-label="4 / 4" 
+                style={{width: "362.667px", marginRight: "40px"}} data-swiper-slide-index="3">
                   <div className="d-flex flex-column justify-content-between h-100">
                     <h4 className="text-black">“Buyer buzz partner network disruptive non-disclosure agreement business”</h4>
-                    <div className="d-flex align-items-center gap-3 mt-5"><Image src={IMAGES.Review3} alt="" />
+                    <div className="d-flex align-items-center gap-3 mt-5"><Image src={IMAGES.Review3} alt="" width="auto" height="auto" className="review-img"/>
                       <div className="text-black">
                         <p className="mb-0 fw-bold text-dark">Albus Dumbledore</p><small>Manager @ Howarts</small>
                       </div>
@@ -80,7 +81,7 @@ const Review = () => {
                 <SwiperSlide className="bg-white p-5 rounded-3 h-auto swiper-slide-active" role="group" aria-label="1 / 4" style={{width: "362.667px", marginRight: "40px"}} data-swiper-slide-index="0">
                   <div className="d-flex flex-column justify-content-between h-100">
                     <h4 className="text-black">“Buyer buzz partner network disruptive non-disclosure agreement business”</h4>
-                    <div className="d-flex align-items-center gap-3 mt-5"><Image src={IMAGES.Review3} alt="" />
+                    <div className="d-flex align-items-center gap-3 mt-5"><Image src={IMAGES.Review3} alt="" width="auto" height="auto" className="review-img"/>
                       <div className="text-black">
                         <p className="mb-0 fw-bold text-dark">Albus Dumbledore</p><small>Manager @ Howarts</small>
                       </div>
@@ -90,7 +91,7 @@ const Review = () => {
                 <SwiperSlide className="bg-white p-5 rounded-3 h-auto swiper-slide-next" role="group" aria-label="2 / 4" style={{width: "362.667px", marginRight: "40px"}} data-swiper-slide-index="1">
                   <div className="d-flex flex-column justify-content-between h-100">
                     <h4 className="text-black">“Learning curve infrastructure value proposition advisor strategy user experience hypotheses investor.”</h4>
-                    <div className="d-flex align-items-center gap-3 mt-5"><Image src={IMAGES.Review2} alt="" />
+                    <div className="d-flex align-items-center gap-3 mt-5"><Image src={IMAGES.Review2} alt="" width="auto" height="auto" className="review-img"/>
                       <div className="text-black">
                         <p className="mb-0 fw-bold text-dark">Severus Snape</p><small>Manager @ Slytherin</small>
                       </div>

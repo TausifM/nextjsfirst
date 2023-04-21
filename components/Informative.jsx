@@ -20,7 +20,7 @@ const Informative = () => {
             </li>
           </ul>
         </div>
-        <div className="col-lg-6 text-center text-lg-end"><Image className="img-fluid" src={IMAGES.Offer2} alt="" /></div>
+        <div className="col-lg-6 text-center text-lg-end"><Image className="img-fluid" src={IMAGES.Offer2} alt="" width="auto" height="auto" /></div>
       </div>
     </div> 
   </section>

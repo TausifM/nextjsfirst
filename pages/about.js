@@ -21,11 +21,11 @@ const About = () => {
       <section className="pb-0">
         <div className="container">
           <div className="gallery-wraper">
-            <div className="img-wraper"><Image className="img-fluid" src={IMAGES.Gallery1} alt="" /></div>
-            <div className="img-wraper"><Image className="img-fluid" src={IMAGES.Gallery2} alt="" /></div>
-            <div className="img-wraper"><Image className="img-fluid" src={IMAGES.Gallery3} alt="" /></div>
-            <div className="img-wraper"><Image className="img-fluid" src={IMAGES.Gallery4} alt="" /></div>
-            <div className="img-wraper"><Image className="img-fluid" src={IMAGES.Gallery5} alt="" /></div>
+            <div className="img-wraper"><Image className="img-fluid" src={IMAGES.Gallery1} alt="" width="auto" height="auto" /></div>
+            <div className="img-wraper"><Image className="img-fluid" src={IMAGES.Gallery2} alt="" width="auto" height="auto"/></div>
+            <div className="img-wraper"><Image className="img-fluid" src={IMAGES.Gallery3} alt="" width="auto" height="auto"/></div>
+            <div className="img-wraper"><Image className="img-fluid" src={IMAGES.Gallery4} alt="" width="auto" height="auto"/></div>
+            <div className="img-wraper"><Image className="img-fluid" src={IMAGES.Gallery5} alt="" width="auto" height="auto"/></div>
           </div>
           <div className="px-xl-8 px-md-5 px-3 py-8">
             <p className="fs-1">Our Story</p>
@@ -116,21 +116,21 @@ const About = () => {
             <h1 className="text-white fs-lg-6 fs-md-4 fs-3 my-lg-4 my-3">Things in we believe</h1>
             <p className="text-light w-lg-75 fs-1">Conversion angel investor entrepreneur first mover advantage. Handshake infographic mass market crowdfunding iteration. Traction stock user experience deployment beta innovator incubator focus.</p>
             <div className="row mt-5">
-              <div className="col-md-3"><Image className="img-fluid" src={IMAGES.Values1} alt="" /></div>
+              <div className="col-md-3"><Image className="img-fluid" src={IMAGES.Values1} alt="" width="auto" height="auto"/></div>
               <div className="col-md-9 mt-2 mb-md-0">
                 <h1 className="text-white fs-2 fs-lg-3 my-2">We are commited.</h1>
                 <p className="text-light fs-1">Conversion angel investor entrepreneur first mover advantage. Handshake infographic mass market crowdfunding iteration.</p>
               </div>
             </div>
             <div className="row mt-5">
-              <div className="col-md-3"><Image className="img-fluid" src={IMAGES.Values2} alt="" /></div>
+              <div className="col-md-3"><Image className="img-fluid" src={IMAGES.Values2} alt="" width="auto" height="auto"/></div>
               <div className="col-md-9 mt-2 mb-md-0">
                 <h1 className="text-white fs-2 fs-lg-3 my-2">We are responsible.</h1>
                 <p className="text-light fs-1">Conversion angel investor entrepreneur first mover advantage. Handshake infographic mass market crowdfunding iteration.</p>
               </div>
             </div>
             <div className="row mt-5">
-              <div className="col-md-3"><Image className="img-fluid" src={IMAGES.Values3}alt="" /></div>
+              <div className="col-md-3"><Image className="img-fluid" src={IMAGES.Values3}alt="" width="auto" height="auto"/></div>
               <div className="col-md-9 mt-2 mb-md-0">
                 <h1 className="text-white fs-2 fs-lg-3 my-2">We aim for progress.</h1>
                 <p className="text-light fs-1">Conversion angel investor entrepreneur first mover advantage. Handshake infographic mass market crowdfunding iteration.</p>

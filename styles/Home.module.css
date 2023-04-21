@@ -1,3 +1,5 @@
 .bgholderimg{
   background-image: url("../asset/img/promo/promo-bg.png");
+  width: auto;
+  height: auto;
 }

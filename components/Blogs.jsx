@@ -18,6 +18,7 @@ const Blogs = () => {
                   className="w-75 w-md-100 rounded-2"
                   src={IMAGES.Blog1}
                   alt=""
+                  width="auto" height="auto"
                 />
               </Link>
               <div className="d-flex align-items-center justify-content-center justify-content-md-start gap-2 mt-3">
@@ -50,6 +51,7 @@ const Blogs = () => {
                   className="w-75 w-md-100 rounded-2"
                   src={IMAGES.Blog2}
                   alt=""
+                  width="auto" height="auto"
                 />
               </Link>
               <div className="d-flex align-items-center justify-content-center justify-content-md-start gap-2 mt-3">
@@ -83,6 +85,8 @@ const Blogs = () => {
                   className="w-75 w-md-100 rounded-2"
                   src={IMAGES.Blog3}
                   alt=""
+                  width="auto"
+                  height="auto"
                 />
               </Link>
               <div className="d-flex align-items-center justify-content-center justify-content-md-start gap-2 mt-3">

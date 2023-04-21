@@ -42,22 +42,20 @@ const LogoSlider = () => {
         delay: 2500,
         disableOnInteraction: false,
       }}
-      onSlideChange={() => console.log('slide change')}
-      onSwiper={(swiper) => console.log(swiper)}
       grabCursor={true}
       breakpoints={breakpoints}
       freeMode={true}
-      // loop={true}
+      loop={true}
       pagination={paginationProp}
       modules={[Autoplay, Pagination, Navigation]}
       className="swiper-container swiper-shadow swiper-theme"
       effect="fade"
     >
-       <SwiperSlide><div className=" text-center"><Image src={IMAGES.Logo1} alt="" /></div></SwiperSlide>
-        <SwiperSlide><div className="text-center"><Image src={IMAGES.Logo2} alt="" /></div></SwiperSlide>
-        <SwiperSlide><div className=" text-center"><Image src={IMAGES.Logo1} alt="" /></div></SwiperSlide>
-        <SwiperSlide><div className="text-center"><Image src={IMAGES.Logo2} alt="" /></div></SwiperSlide>
-        <SwiperSlide><div className="text-center"><Image src={IMAGES.Logo1} alt="" /></div></SwiperSlide>
+       <SwiperSlide><div className=" text-center"><Image src={IMAGES.Logo1} alt="" width="auto" height="auto" /></div></SwiperSlide>
+        <SwiperSlide><div className="text-center"><Image src={IMAGES.Logo2} alt="" width="auto" height="auto" /></div></SwiperSlide>
+        <SwiperSlide><div className=" text-center"><Image src={IMAGES.Logo1} alt="" width="auto" height="auto" /></div></SwiperSlide>
+        <SwiperSlide><div className="text-center"><Image src={IMAGES.Logo2} alt="" width="auto" height="auto"/></div></SwiperSlide>
+        <SwiperSlide><div className="text-center"><Image src={IMAGES.Logo1} alt="" width="auto" height="auto" /></div></SwiperSlide>
         <span className="swiper-notification" aria-live="assertive" aria-atomic="true"></span> 
     </Swiper>
   )
