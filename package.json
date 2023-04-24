@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-three/fiber": "^8.12.2",
+    "@types/three": "^0.150.2",
     "eslint": "8.28.0",
     "eslint-config-next": "13.0.4",
     "gsap": "^3.11.5",
@@ -16,7 +18,10 @@
     "react": "18.2.0",
     "react-animated-cursor": "^2.5.2",
     "react-dom": "18.2.0",
+    "react-particles": "^2.9.3",
     "sass": "^1.62.0",
-    "swiper": "^9.2.3"
+    "swiper": "^9.2.3",
+    "three": "^0.151.3",
+    "tsparticles": "^2.9.3"
   }
 }

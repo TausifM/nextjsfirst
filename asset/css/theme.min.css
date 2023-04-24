@@ -148,8 +148,8 @@
     left: 0;
     z-index: -1;
     border-radius: 5rem;
-    background-color: #05e8ba;
-    background-image: linear-gradient(315deg, #05e8ba 0%, #087ee1 74%);
+    /* background-color: #05e8ba; */
+    background-image: linear-gradient(-225deg, #7742B2 0%, #F180FF 52%, #FD8BD9 100%);
     transition: all 0.3s ease;
   }
   .btn-14:hover {
@@ -163,3 +163,14 @@
   .btn-14:active {
     top: 5px;
   }
+  .hero-body {
+    position: relative;
+  }
+  #tsparticles > canvas{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+  }
+  

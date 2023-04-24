@@ -1,103 +1,159 @@
-import { useEffect, useRef, useState } from 'react';
-import Image from 'next/image'
-import Link from 'next/link'
-import LogoSlider from './LogoSlider';
-import BgImg from '../asset/img/hero/hero-bg.png';
-import BgImg2 from '../asset/img/hero/hero-graphics.png';
+import Image from "next/image";
+import Link from "next/link";
+import { Canvas } from "@react-three/fiber";
+import { Suspense, lazy, useCallback } from "react";
+import Particles from "react-particles";
+import { loadFull } from "tsparticles";
+import LogoSlider from "./LogoSlider";
+import BgImg from "../asset/img/hero/hero-bg.png";
+const Blob = lazy(() => import("./Blob"));
 
 const HeroSection = () => {
-    const [bounds, setBounds] = useState(null);
-    const cardRef = useRef(null);
-  
-    function rotateToMouse(e) {
-      if (!bounds) return;
-      const mouseX = e.clientX;
-      const mouseY = e.clientY;
-      const leftX = mouseX - bounds.x;
-      const topY = mouseY - bounds.y;
-      const center = {
-        x: leftX - bounds.width / 2,
-        y: topY - bounds.height / 2
-      }
-      const distance = Math.sqrt(center.x**2 + center.y**2);
-  
-      const card = cardRef.current;
-      if (card) {
-        card.style.transform = `
-          scale3d(1.07, 1.07, 1.07)
-          rotate3d(
-            ${center.y / 100},
-            ${-center.x / 100},
-            0,
-            ${Math.log(distance)* 2}deg
-          )
-        `;
-        card.querySelector('.glow').style.backgroundImage = `
-          radial-gradient(
-            circle at
-            ${center.x * 2 + bounds.width/2}px
-            ${center.y * 2 + bounds.height/2}px,
-            #ffffff55,
-            #0000000f
-          )
-        `;
-      }
-    }
-  
-    function handleMouseEnter() {
-      setBounds(cardRef.current.getBoundingClientRect());
-      document.addEventListener('mousemove', rotateToMouse);
-    }
-  
-    function handleMouseLeave() {
-      document.removeEventListener('mousemove', rotateToMouse);
-      const card = cardRef.current;
-      if (card) {
-        card.style.transform = '';
-        card.style.background = '';
-      }
-    }
-  
-    useEffect(() => {
-      const card = cardRef.current;
-      if (card) {
-        card.addEventListener('mouseenter', handleMouseEnter);
-        card.addEventListener('mouseleave', handleMouseLeave);
-        return () => {
-          card.removeEventListener('mouseenter', handleMouseEnter);
-          card.removeEventListener('mouseleave', handleMouseLeave);
-        };
-      }
-    }, []);
+  const particlesInit = useCallback(async (engine) => {
+    // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
+    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
+    // starting from v2 you can add only the features you need reducing the bundle size
+    await loadFull(engine);
+  }, []);
 
+  const particlesLoaded = useCallback(async (container) => {
+    await console.log(container);
+  }, []);
   return (
     <div className="bg-dark">
-        <Image className="img-fluid hero-img position-absolute end-0" src={BgImg} alt="" width="auto" height="auto" 
-        blurDataURL={BgImg} rel="preload" crossOrigin='anonymous' priority/>
-        <section className="pb-5">
-            <div className="container">
-                <div className="row align-items-center py-lg-8 py-6">
-                <div className="col-lg-6 text-center text-lg-start">
-                    <p className="m-3 text-600 fs-3 text-muted ms-0 fw-light text-uppercase">Welcome to Love Lace Innovations</p>
-                    <h1 className="text-white fs-5 fs-xl-6 mb-4">We are a creative group of people who design influential brands and digital experiences.</h1>
-                    <div className="d-sm-flex align-items-center gap-3">
-                    <Link href='/contact' className="custom-btn btn-14 mb-3 w-75 text-uppercase">Start a project</Link>
-                    <Link href='/about' className="btn btn-outline-light mb-3 w-75 text-uppercase text-muted">More about us</Link>
-                    </div>
-                </div>
-                    <div className="col-lg-6 text-center text-lg-end mt-3 mt-lg-0">
-                        <div className="hero-card text-center" ref={cardRef}>
-                            <Image className="img-fluid" src={BgImg2} alt="" 
-                            width="auto" height="auto" rel="preload" crossOrigin='anonymous' priority />
-                            <div className="glow"></div>
-                        </div>   
-                    </div>
-                </div>
-                <LogoSlider />
-            </div> 
-        </section> 
-  </div>
-  )
-}
+      <Image
+        className="img-fluid hero-img position-absolute end-0"
+        src={BgImg}
+        alt=""
+        width="auto"
+        height="auto"
+        blurDataURL={BgImg}
+        rel="preload"
+        crossOrigin="anonymous"
+        priority
+      />
+      <section className="pb-5">
+        <div className="container">
+          <div className="row align-items-center py-lg-5 py-5">
+            <div style={{ position: "relative !important" }}>
+              <Particles
+                id="tsparticles"
+                style={{position: "absolute !important", top: 0, left: 0, right: 0, bottom: 0, height: "100vh"}}
+                init={particlesInit}
+                loaded={particlesLoaded}
+                options={{
+                  fpsLimit: 120,
+                  interactivity: {
+                    events: {
+                      onClick: {
+                        enable: true,
+                        mode: "push",
+                      },
+                      onHover: {
+                        enable: true,
+                        mode: "repulse",
+                      },
+                      resize: true,
+                    },
+                    modes: {
+                      push: {
+                        quantity: 4,
+                      },
+                      repulse: {
+                        distance: 200,
+                        duration: 0.4,
+                      },
+                    },
+                  },
+                  particles: {
+                    color: {
+                      value: "#ffffff",
+                    },
+                    links: {
+                      color: "#ffffff",
+                      distance: 150,
+                      enable: true,
+                      opacity: 1,
+                      width: 0.2,
+                    },
+                    collisions: {
+                      enable: true,
+                    },
+                    move: {
+                      directions: "none",
+                      enable: true,
+                      outModes: {
+                        default: "bounce",
+                      },
+                      random: false,
+                      speed: 3,
+                      straight: false,
+                    },
+                    number: {
+                      density: {
+                        enable: true,
+                        area: 800,
+                      },
+                      value: 80,
+                    },
+                    opacity: {
+                      value: 0.5,
+                    },
+                    shape: {
+                      type: "circle",
+                    },
+                    size: {
+                      value: { min: 1, max: 5 },
+                    },
+                  },
+                  detectRetina: true,
+                }}
+              />
+            </div>
+            <div className="col-lg-6 text-center text-lg-start">
+              <p className="m-3 text-600 fs-3 text-muted ms-0 fw-light text-uppercase">
+                Welcome to Love Lace Innovations
+              </p>
+              <h1 className="text-white fs-5 fs-xl-6 mb-4">
+                We are a creative group of people who design influential brands
+                and digital experiences.
+              </h1>
+              <div className="d-sm-flex align-items-center gap-3">
+                <Link
+                  href="/contact"
+                  className="custom-btn btn-14 mb-3 w-75 text-uppercase"
+                >
+                  Start a project
+                </Link>
+                <Link
+                  href="/about"
+                  className="btn btn-outline-light mb-3 w-75 text-uppercase text-muted"
+                >
+                  More about us
+                </Link>
+              </div>
+            </div>
+            <div className="col-lg-6 text-lg-end mt-3 mt-lg-0">
+              <div className="text-center p-0">
+                <Suspense fallback={<p>Loding</p>}>
+                  <Canvas
+                    camera={{ position: [0.0, 0.0, 3.5] }}
+                    style={{ height: "450px", padding: "10px" }}
+                  >
+                    <Blob />
+                  </Canvas>
+                </Suspense>
+                {/* <Image className="img-fluid" src={BgImg2} alt="" 
+                  width="auto" height="auto" rel="preload" crossOrigin='anonymous' priority />
+                  <div className="glow"></div> */}
+              </div>
+            </div>
+          </div>
+          <LogoSlider />
+        </div>
+      </section>
+    </div>
+  );
+};
 
-export default HeroSection
+export default HeroSection;
