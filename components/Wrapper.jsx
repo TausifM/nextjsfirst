@@ -1,5 +1,5 @@
 import dynamic from 'next/dynamic';
-import Header from "./Header";
+import Header from './Header/Header';
 const AnimatedCursor = dynamic(() => import('react-animated-cursor'), { ssr: false });
 
 const Wrapper = (props) => {

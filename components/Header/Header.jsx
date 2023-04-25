@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from 'next/router';
-import Logo from "../asset/img/logo.png";
+import { useRouter } from "next/router";
 
 const Header = () => {
   const [navbarCollapse, setNavbarCollapse] = useState(false);
@@ -18,9 +16,9 @@ const Header = () => {
   };
   const handleCollapse = () => {
     setNavbarCollapse((prev) => {
-      return !prev
-    });  
-  }
+      return !prev;
+    });
+  };
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -36,10 +34,28 @@ const Header = () => {
       data-navbar-on-scroll="data-navbar-on-scroll"
     >
       <div className="container">
-          <Image src={Logo} alt="" width="auto" height="auto" 
-             blurDataURL={Logo} className="navbar-brand pt-1 pb-0 z-index-3" rel="preload" crossOrigin='anonymous'/>
+        <div className="logo-container ms-2">
+          <div className="heart"></div>
+        </div>
+        <svg className="text" width="5.8cm" height="2cm" viewBox="130 25 120 160">
+          <text
+            fill="none"
+            stroke="#fff"
+            transform="translate(3 102)"
+            strokeWidth="3"
+            fontSize="50"
+            fontWeight="800"
+            letterSpacing="0.1em"
+            className="is-active"
+          >
+            <tspan>LOVE LACE</tspan>
+            <tspan x="0" y="50" className="is-active">INNOVATIONS</tspan>
+          </text>
+        </svg>
         <button
-          className={`navbar-toggler ${navbarCollapse ? "collapsed z-index-1" : ""}`}
+          className={`navbar-toggler ${
+            navbarCollapse ? "collapsed z-index-1" : ""
+          }`}
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
@@ -50,21 +66,48 @@ const Header = () => {
         >
           <i className="fa-solid fa-bars text-white fs-3"></i>
         </button>
-        <div className={`navbar-collapse ${navbarCollapse ? "" : "collapse"}`} id="navbarSupportedContent">
+        <div
+          className={`navbar-collapse ${navbarCollapse ? "" : "collapse"}`}
+          id="navbarSupportedContent"
+        >
           <ul className="navbar-nav ms-auto mt-3 mt-lg-0">
             <li className="nav-item">
-              <Link aria-current="page" href="/" className={router.pathname == "/" ? "nav-link active mt-1" : "nav-link mt-1"}>
-                  Home
+              <Link
+                aria-current="page"
+                href="/"
+                className={
+                  router.pathname == "/"
+                    ? "nav-link active mt-1"
+                    : "nav-link mt-1"
+                }
+              >
+                Home
               </Link>
             </li>
             <li className="nav-item">
-              <Link aria-current="page" href="/about" className={router.pathname == "/about" ? "nav-link active mt-1" : "nav-link mt-1"}>
-                   About
+              <Link
+                aria-current="page"
+                href="/about"
+                className={
+                  router.pathname == "/about"
+                    ? "nav-link active mt-1"
+                    : "nav-link mt-1"
+                }
+              >
+                About
               </Link>
             </li>
             <li className="nav-item">
-              <Link aria-current="page" href="/contact" className={router.pathname == "/contact" ? "nav-link active mt-1" : "nav-link mt-1"}>
-                   Contact
+              <Link
+                aria-current="page"
+                href="/contact"
+                className={
+                  router.pathname == "/contact"
+                    ? "nav-link active mt-1"
+                    : "nav-link mt-1"
+                }
+              >
+                Contact
               </Link>
             </li>
             <li className="nav-item mt-2 mt-lg-0">

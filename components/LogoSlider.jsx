@@ -48,7 +48,7 @@ const LogoSlider = () => {
       loop={true}
       pagination={paginationProp}
       modules={[Autoplay, Pagination, Navigation]}
-      className="swiper-container swiper-shadow swiper-theme"
+      className="swiper-container swiper-shadow swiper-theme z-index-0"
       effect="fade"
     >
        <SwiperSlide><div className=" text-center"><Image src={IMAGES.Logo1} alt="" width="auto" height="auto" /></div></SwiperSlide>

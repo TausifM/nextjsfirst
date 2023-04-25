@@ -9,7 +9,7 @@ const Accordion = ({ header, body }) => {
   };
   return (
     <>
-      <div className="accordion-item"></div>
+      <div className="accordion-item z-index-0"></div>
       <h2 className="accordion-header border-bottom" id="srgdgfdgdgg45">
         <button
           className={`accordion-button ${
@@ -26,7 +26,7 @@ const Accordion = ({ header, body }) => {
         </button>
       </h2>
       <div
-        className={`accordion-collapse ${accordionCollapse ? "" : "collapse"}`}
+        className={`accordion-collapse ${accordionCollapse ? " zindex-0" : "collapse z-index-0"}`}
         aria-labelledby="srgdgfdgdgg45"
         data-bs-parent="#accordionFlushExample"
         id="srgdgfdgdgg45tyuu"
