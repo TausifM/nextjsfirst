@@ -4,7 +4,7 @@ import { IMAGES } from "../asset";
 
 function LogoDesign() {
   return (
-    <section className='pt-4 border-lg-top border-lg-bottom pb-5'>
+    <section className='pt-6 border-lg-top border-lg-bottom pb-5 bg-dark'>
     <div className="container">
       <h4 className="text-center fs-3 text-uppercase fw-bold text-white">Logo Designs</h4>
       <p className="mx-auto text-center fs-lg-1 fs-md-1 w-lg-75 text-muted">

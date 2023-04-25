@@ -42,7 +42,7 @@ const SEOServices = () => {
     // }, []);
 
   return (
-    <section className='pt-7 bg-white pb-5'>
+    <section className='pt-6 bg-white pb-5'>
     <div className="container">
       <h4 className="text-center fs-3 text-uppercase text-dark fw-bold">SEARCH ENGINE OPTIMIZATION</h4>
       <p className="mx-auto text-center fs-lg-1 fs-md-1 w-lg-75 text-black">

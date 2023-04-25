@@ -4,7 +4,7 @@ import { IMAGES } from "../asset";
 
 const Blogs = () => {
   return (
-    <section className="pb-2">
+    <section className="pb-2 bg-dark">
       <div className="container">
         <p className="text-center text-light fs-1">Our Blog</p>
         <h2 className="mx-auto text-center fs-lg-6 fs-md-5 w-lg-75 text-light">

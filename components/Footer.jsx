@@ -4,7 +4,7 @@ import { IMAGES } from "../asset";
 
 const Footer = () => {
   return (
-    <section className="pt-0 pb-4">
+    <section className="pt-0 pb-4"style={{backgroundColor:'#F8F8F8'}}>
     <div className="container">
       <div className="row justify-content-between">
         <div className="col-lg-6 col-sm-12">
