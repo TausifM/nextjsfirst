@@ -34,6 +34,7 @@ const Header = () => {
       data-navbar-on-scroll="data-navbar-on-scroll"
     >
       <div className="container">
+        <Link href="/" className="d-flex">
         <div className="logo-container ms-2">
           <div className="heart"></div>
         </div>
@@ -52,6 +53,7 @@ const Header = () => {
             <tspan x="0" y="50" className="is-active">INNOVATIONS</tspan>
           </text>
         </svg>
+        </Link>
         <button
           className={`navbar-toggler ${
             navbarCollapse ? "collapsed z-index-1" : ""

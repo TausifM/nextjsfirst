@@ -135,6 +135,9 @@
     outline: none;
     z-index: 0;
   }
+  a {
+    text-transform: none;
+  }
   .btn-14 {
     background: #65e4a3;
     border: none;
