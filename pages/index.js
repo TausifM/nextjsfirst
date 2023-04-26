@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import Wrapper from "../components/Wrapper";
 import NewsLetter from "../components/NewsLetter";
 import Footer from "../components/Footer";
@@ -14,29 +14,9 @@ import LogoDesign from "../components/LogoDesign";
 import AmazonEbook from "../components/AmazonEbook";
 
 export default function Home() {
-  const progressBarScroll = () => {
-    let winScroll =
-      document.body.scrollTop || document.documentElement.scrollTop;
-    let height =
-      document.documentElement.scrollHeight -
-      document.documentElement.clientHeight;
-    let scrolled = (winScroll / height) * 100;
-    document.getElementById("progressBar").style.width = scrolled + "%";
-  };
-
-  useEffect(() => {
-    window.onscroll = () => {
-      progressBarScroll();
-    };
-  }, []);
   return (
     <>
       <Wrapper>
-        <div className="headerBar">
-          <div className="progress-container">
-            <div className="progress-bar" id="progressBar"></div>
-          </div>
-        </div>
         <Head>
           <title>
             Love Lace Innovations | Web Design | Website Building | SEO | Logo

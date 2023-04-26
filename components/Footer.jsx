@@ -148,24 +148,53 @@ const Footer = () => {
             </h3>
             <ul className="list-unstyled">
               <li className="mb-3">
-                <Link href="#" className="text-white">
-                  Home
+                <Link
+                  href="mailto:heytausifsheikh@gmail.com"
+                  className="text-white"
+                >
+                  heytausifsheikh@gmail.com
                 </Link>
               </li>
               <li className="mb-3">
-                <Link href="#" className="text-white">
-                  Products
-                </Link>
-              </li>
-              <li className="mb-3">
-                <Link href="#" className="text-white">
-                  Services
+                <Link href="tel:+919975767561" className="text-white">
+                  +91 9975767561
                 </Link>
               </li>
             </ul>
           </div>
         </div>
-        <p className="text-white mt-4">All rights reserved.</p>
+        <div className="row justify-content-between">
+          <div className="text-white mt-4 col-lg-6">
+            <Link
+                  href="/all-rights-reserved"
+                  className="text-white"
+                >
+                  All rights reserved
+                </Link>
+          </div>
+          <div className="text-white mt-4 col-lg-6">
+            <ul className="d-flex list-unstyled">
+              <li className="mb-3">
+                <Link
+                  href="/facebook"
+                  className="text-white"
+                >
+                  FaceBook
+                </Link>
+              </li>
+              <li className="mb-3 ms-2">
+                <Link href="tel:+919975767561" className="text-white">
+                  LinkedIn
+                </Link>
+              </li>
+              <li className="mb-3 ms-2">
+                <Link href="tel:+919975767561" className="text-white">
+                  Github
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
   );

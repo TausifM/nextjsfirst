@@ -89,23 +89,6 @@ const About = () => {
             mover advantage. Handshake infographic mass market crowdfunding iteration.
              Traction stock user experience deployment beta innovator incubator focus.</p>
           </div>
-          {/* <div className="row mt-7">
-            <div className="col-md-4 col-sm-6 mb-5 mb-lg-0 text-center text-sm-left"><Link href="#">
-              <Image className="img-fluid" src="assets/img/team/1.png" alt="" /></Link>
-              <h1 className="fs-3 mt-3">Michael Scott</h1>
-              <p className="fs-1">General Manager</p>
-            </div>
-            <div className="col-md-4 col-sm-6 mb-5 mb-lg-0 text-center text-sm-left"><Link href="#">
-              <Image className="img-fluid" src="assets/img/team/2.png" alt="" /></Link>
-              <h1 className="fs-3 mt-3">Dwight Schrute</h1>
-              <p className="fs-1">General Manager</p>
-            </div>
-            <div className="col-md-4 col-sm-6 mb-5 mb-lg-0 text-center text-sm-left"><Link href="#">
-              <Image className="img-fluid" src="assets/img/team/3.png" alt="" /></Link>
-              <h1 className="fs-3 mt-3">Pam Beetsley</h1>
-              <p className="fs-1">General Manager</p>
-            </div>
-          </div> */}
         </div>
       </section>
       <section className="bg-dark">
