@@ -4,9 +4,9 @@ import { IMAGES } from "../asset";
 
 const WebDesignServices = () => {
   return (
-    <section className='pt-6 border-lg-top pb-5 bg-dark'>
+    <section className='pt-4 border-lg-top pb-5 bg-dark'>
     <div className="container">
-      <h4 className="text-center fs-3 text-uppercase fw-bold text-white">Website Designs</h4>
+      <h1 className="text-center text-uppercase fw-bolder text-white" style={{textDecoration: "underline", textDecorationColor: "orangered", textDecorationThickness: "6px"}}>Website Designs</h1>
       <p className="mx-auto text-center fs-lg-1 fs-md-1 w-lg-75 text-muted">
       Web design is the process of creating visually appealing and user-friendly websites that effectively communicate a brand&apos; 
       message and achieve its goals. It involves a combination of aesthetic design principles, usability best practices, 

@@ -2,10 +2,16 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <section className="pt-0 pb-4" style={{ backgroundColor: "#3d3d3d36" }}>
+    <section
+      className="pt-0 pb-4"
+      style={{
+        backgroundColor: "#7f5a83",
+        backgroundImage: "linear-gradient(265deg, #7f5a83 0%, #0a2640 74%)",
+      }}
+    >
       <div className="container">
         <div className="row justify-content-between">
-          <div className="col-lg-6 col-sm-12">
+          <div className="col-lg-4 col-sm-12">
             <div className="d-flex mb-2 ms-3">
               <div className="logo-container ms-2">
                 <div className="heart"></div>
@@ -33,76 +39,133 @@ const Footer = () => {
                 </text>
               </svg>
             </div>
-            <p className="w-lg-75 text-black-50">
-              Social media validation business model canvas graphical user
-              interface launch party creative facebook iPad twitter.
+            <p className="text-white">
+              We are a full-service digital agency offering top-notch services
+              in website design, web design, SEO, and logo design. Our team of
+              skilled professionals can help you create a stunning website that
+              is not only visually appealing but also optimized for search
+              engines to rank higher in search results. <br />
+              Contact us today to take your online presence to the next level!
             </p>
           </div>
           <div className="col-lg-2 col-sm-4">
-            <h3 className="fw-bold fs-1 mt-5 mb-4">Landings</h3>
+            <h3
+              className="fw-bolder fs-1 mt-5 mb-4 text-white"
+              style={{
+                textDecoration: "underline",
+                textDecorationColor: "orangered",
+                textDecorationThickness: "6px",
+              }}
+            >
+              General
+            </h3>
             <ul className="list-unstyled">
               <li className="my-3 col-md-4">
-                <Link href="#" className="text-black-50">
-                  Home
+                <Link href="/about" className="text-white">
+                  About
                 </Link>
               </li>
               <li className="my-3">
-                <Link href="#" className="text-black-50">
-                  Products
+                <Link href="/testimonials" className="text-white">
+                  Testimonials
                 </Link>
               </li>
               <li className="my-3">
-                <Link href="#" className="text-black-50">
-                  Services
+                <Link href="/contact" className="text-white">
+                  Contact
+                </Link>
+              </li>
+              <li className="my-3">
+                <Link href="/blogs" className="text-white">
+                  Blogs
                 </Link>
               </li>
             </ul>
           </div>
           <div className="col-lg-2 col-sm-4">
-            <h3 className="fw-bold fs-1 mt-5 mb-4">Company</h3>
+            <h3
+              className="fw-bolder fs-1 mt-5 mb-4 text-white"
+              style={{
+                textDecoration: "underline",
+                textDecorationColor: "orangered",
+                textDecorationThickness: "6px",
+              }}
+            >
+              Company
+            </h3>
             <ul className="list-unstyled">
               <li className="my-3">
-                <Link href="#" className="text-black-50">
-                  Home
+                <Link href="/website-design" className="text-white">
+                  Website Design
                 </Link>
               </li>
               <li className="my-3">
-                <Link href="#" className="text-black-50">
-                  Careers
+                <Link href="/seo-packages" className="text-white">
+                  SEO Packages
                 </Link>
-                <span className="py-1 px-2 rounded-2 bg-success fw-bold text-dark ms-2">
-                  Hiring!
-                </span>
               </li>
               <li className="my-3">
-                <Link href="#" className="text-black-50">
-                  Services
+                <Link href="/logo-design" className="text-white">
+                  Logo Design
+                </Link>
+              </li>
+              <li className="my-3">
+                <Link href="/e-commerce" className="text-white">
+                  E-commerce
                 </Link>
               </li>
             </ul>
           </div>
           <div className="col-lg-2 col-sm-4">
-            <h3 className="fw-bold fs-1 mt-5 mb-4">Resources</h3>
+            <h3
+              className="fw-bolder fs-1 mt-5 mb-4 text-white"
+              style={{
+                textDecoration: "underline",
+                textDecorationColor: "orangered",
+                textDecorationThickness: "6px",
+              }}
+            >
+              Courses
+            </h3>
+            <ul className="list-unstyled">
+              <li className="my-3">
+                <Link href="/e-book" className="text-white">
+                  E-book
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div className="col-lg-2 col-sm-4">
+            <h3
+              className="fw-bolder fs-1 mt-5 mb-4 text-white"
+              style={{
+                textDecoration: "underline",
+                textDecorationColor: "orangered",
+                textDecorationThickness: "6px",
+              }}
+            >
+              Contact
+            </h3>
             <ul className="list-unstyled">
               <li className="mb-3">
-                <Link href="#" className="text-black-50">
+                <Link href="#" className="text-white">
                   Home
                 </Link>
               </li>
               <li className="mb-3">
-                <Link href="#" className="text-black-50">
+                <Link href="#" className="text-white">
                   Products
                 </Link>
               </li>
               <li className="mb-3">
-                <Link href="#" className="text-black-50">
+                <Link href="#" className="text-white">
                   Services
                 </Link>
               </li>
             </ul>
           </div>
         </div>
-        <p className="text-black-50">All rights reserved.</p>
+        <p className="text-white mt-4">All rights reserved.</p>
       </div>
     </section>
   );

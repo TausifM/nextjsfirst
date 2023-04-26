@@ -4,9 +4,9 @@ import { IMAGES } from "../asset";
 
 function LogoDesign() {
   return (
-    <section className='pt-6 border-lg-top border-lg-bottom pb-5 bg-dark'>
+    <section className='pt-4 border-lg-top border-lg-bottom pb-5 bg-dark'>
     <div className="container">
-      <h4 className="text-center fs-3 text-uppercase fw-bold text-white">Logo Designs</h4>
+      <h1 className="text-center text-uppercase text-white fw-bolder" style={{textDecoration: "underline", textDecorationColor: "orangered", textDecorationThickness: "6px"}}>Logo Designs</h1>
       <p className="mx-auto text-center fs-lg-1 fs-md-1 w-lg-75 text-muted">
       Logo design is important because it serves as the visual representation of a company or brand. 
       It is often the first thing that customers see and associate with the brand, and it plays a 
