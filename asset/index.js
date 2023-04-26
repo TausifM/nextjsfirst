@@ -27,6 +27,5 @@ export const IMAGES = {
     Blog4: require("./img/blog/4.png"),
     Blog5: require("./img/blog/5.png"),
     Blog6: require("./img/blog/6.png"),
-    BlackLogo: require("./img/black-logo.png"),
     SEOImg: require("./img/seo/seo.jpg"),
 }
