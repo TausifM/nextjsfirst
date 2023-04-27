@@ -29,8 +29,8 @@ const Header = () => {
   return (
     <nav
       className={`navbar navbar-expand-lg fixed-top navbar-dark p-3 mt-2 ${
-        isScrolled ? "bg-dark shadow-transition z-index-1" : ""
-      } ${navbarCollapse ? "bg-dark z-index-1" : "z-index-1"}`}
+        isScrolled ? "bg-dark shadow-transition z-index-3" : ""
+      } ${navbarCollapse ? "bg-dark z-index-3" : "z-index-3"}`}
       data-navbar-on-scroll="data-navbar-on-scroll"
     >
       <div className="container">

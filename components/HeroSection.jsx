@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Image from "next/image";
 import Link from "next/link";
 import dynamic from "next/dynamic";
@@ -10,6 +11,7 @@ import CircleToolTipContent from "./Blob/CircleToolTipContent";
 const Blob = dynamic(() => import("./Blob"), { ssr: false });
 
 const HeroSection = () => {
+  const [activeCircle, setActiveCircle] = useState(false);
   return (
     <div className="bg-dark">
       <Image
@@ -60,13 +62,13 @@ const HeroSection = () => {
                 >
                   <Blob />
                 </Canvas>
-                <div className="item-hints text-center position-absolute">
+                <div className="item-hints text-center position-absolute z-index-1" onClick={() => setActiveCircle(!activeCircle)}>
                   <div className="hint">
                     <span className="hint-radius"></span>
                     <span className="hint-dot"></span>
                   </div>
                 </div>
-                <CircleToolTipContent />
+                {activeCircle ? <CircleToolTipContent activeCircle={activeCircle} /> : null}
               </div>
               </div>
             </div>

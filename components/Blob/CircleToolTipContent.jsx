@@ -1,8 +1,8 @@
 import Image from "next/image"
 
-const CircleToolTipContent = () => {
+const CircleToolTipContent = ({activeCircle}) => {
   return (
-    <div className="circletooltip-container">
+    <div className="circletooltip-container" style={{display: activeCircle ? 'flex' : 'none'}}>
     <div className="cicletooltip">
       <div className="big-circle">
         <div className="icon-block">
