@@ -1,24 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { Canvas } from "@react-three/fiber";
-import { Suspense, lazy, useCallback } from "react";
-import Particles from "react-particles";
-import { loadFull } from "tsparticles";
 import LogoSlider from "./LogoSlider";
 import BgImg from "../asset/img/hero/hero-bg.png";
-const Blob = lazy(() => import("./Blob"));
+import ParticlesEffect from "./Particles/ParticlesEffect";
+import CircleToolTipContent from "./Blob/CircleToolTipContent";
+
+const Blob = dynamic(() => import("./Blob"), { ssr: false });
 
 const HeroSection = () => {
-  const particlesInit = useCallback(async (engine) => {
-    // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
-    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-    // starting from v2 you can add only the features you need reducing the bundle size
-    await loadFull(engine);
-  }, []);
-
-  const particlesLoaded = useCallback(async (container) => {
-    await console.log(container);
-  }, []);
   return (
     <div className="bg-dark">
       <Image
@@ -36,79 +27,7 @@ const HeroSection = () => {
         <div className="container">
           <div className="row align-items-center py-lg-5 py-5">
             <div style={{ position: "relative !important" }}>
-              <Particles
-                id="tsparticles"
-                style={{position: "absolute !important", top: 0, left: 0, right: 0, bottom: 0, height: "100vh"}}
-                init={particlesInit}
-                loaded={particlesLoaded}
-                options={{
-                  fpsLimit: 120,
-                  interactivity: {
-                    events: {
-                      onClick: {
-                        enable: true,
-                        mode: "push",
-                      },
-                      onHover: {
-                        enable: true,
-                        mode: "repulse",
-                      },
-                      resize: true,
-                    },
-                    modes: {
-                      push: {
-                        quantity: 4,
-                      },
-                      repulse: {
-                        distance: 200,
-                        duration: 0.4,
-                      },
-                    },
-                  },
-                  particles: {
-                    color: {
-                      value: "#ffffff",
-                    },
-                    links: {
-                      color: "#ffffff",
-                      distance: 150,
-                      enable: true,
-                      opacity: 1,
-                      width: 0.2,
-                    },
-                    collisions: {
-                      enable: true,
-                    },
-                    move: {
-                      directions: "none",
-                      enable: true,
-                      outModes: {
-                        default: "bounce",
-                      },
-                      random: false,
-                      speed: 3,
-                      straight: false,
-                    },
-                    number: {
-                      density: {
-                        enable: true,
-                        area: 800,
-                      },
-                      value: 80,
-                    },
-                    opacity: {
-                      value: 0.5,
-                    },
-                    shape: {
-                      type: "circle",
-                    },
-                    size: {
-                      value: { min: 1, max: 5 },
-                    },
-                  },
-                  detectRetina: true,
-                }}
-              />
+              <ParticlesEffect />
             </div>
             <div className="col-lg-6 text-center text-lg-start">
               <p className="m-3 text-600 fs-3 text-muted ms-0 fw-light text-uppercase">
@@ -133,22 +52,24 @@ const HeroSection = () => {
                 </Link>
               </div>
             </div>
-            <div className="col-lg-6 text-lg-end mt-3 mt-lg-0">
-              <div className="text-center p-0">
-                <Suspense fallback={<p>Loding</p>}>
-                  <Canvas
-                    camera={{ position: [0.0, 0.0, 3.5] }}
-                    style={{ height: "450px", padding: "10px" }}
-                  >
-                    <Blob />
-                  </Canvas>
-                </Suspense>
-                {/* <Image className="img-fluid" src={BgImg2} alt="" 
-                  width="auto" height="auto" rel="preload" crossOrigin='anonymous' priority />
-                  <div className="glow"></div> */}
+            <div className="col-lg-6 col-sm-12 text-lg-end mt-lg-0">
+              <div className="p-0 d-flex justify-content-center align-content-center">
+                <Canvas
+                  camera={{ position: [0.0, 0.0, 3.5] }}
+                  style={{ height: "450px", padding: "10px", position: "relative" }}
+                >
+                  <Blob />
+                </Canvas>
+                <div className="item-hints text-center position-absolute">
+                  <div className="hint">
+                    <span className="hint-radius"></span>
+                    <span className="hint-dot"></span>
+                  </div>
+                </div>
+                <CircleToolTipContent />
+              </div>
               </div>
             </div>
-          </div>
           <LogoSlider />
         </div>
       </section>

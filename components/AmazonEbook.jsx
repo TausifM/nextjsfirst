@@ -7,14 +7,14 @@ function AmazonEbook() {
         <h1 className="text-center text-uppercase text-dark fw-bolder" style={{textDecoration: "underline", textDecorationColor: "orangered", textDecorationThickness: "6px"}}>
           AMAZON BOOK PUBLISH OF OUR FOUNDER
         </h1>
-        <div class="header">
+        <div className="header">
           <p>
             To: Dear Clients,
             <br />
             From: Tausif Sheikh (Founder - LoveLace Innovations)
             <br />
           </p>
-          <p class="set-text">
+          <p className="set-text">
             I am thrilled to announce the publication of my latest React
             TypeScript handbook and ebook on Amazon!,
             <br />
