@@ -2,7 +2,7 @@ import Image from "next/image"
 
 const CircleToolTipContent = () => {
   return (
-    <div className="circletooltip-container col-lg-6 col-md-6 col-sm-12">
+    <div className="circletooltip-container">
     <div className="cicletooltip">
       <div className="big-circle">
         <div className="icon-block">
