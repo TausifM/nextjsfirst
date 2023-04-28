@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 
 const Header = () => {
   const [navbarCollapse, setNavbarCollapse] = useState(false);
+  const [dropDownactive, setDropDownactive] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const router = useRouter();
   const handleScroll = () => {
@@ -35,24 +36,31 @@ const Header = () => {
     >
       <div className="container">
         <Link href="/" className="d-flex">
-        <div className="logo-container ms-2">
-          <div className="heart"></div>
-        </div>
-        <svg className="text" width="5.8cm" height="2cm" viewBox="130 25 120 160">
-          <text
-            fill="none"
-            stroke="#fff"
-            transform="translate(3 102)"
-            strokeWidth="3"
-            fontSize="50"
-            fontWeight="800"
-            letterSpacing="0.1em"
-            className="is-active"
+          <div className="logo-container ms-2">
+            <div className="heart"></div>
+          </div>
+          <svg
+            className="text"
+            width="5.8cm"
+            height="2cm"
+            viewBox="130 25 120 160"
           >
-            <tspan>LOVE LACE</tspan>
-            <tspan x="0" y="50" className="is-active">INNOVATIONS</tspan>
-          </text>
-        </svg>
+            <text
+              fill="none"
+              stroke="#fff"
+              transform="translate(3 102)"
+              strokeWidth="3"
+              fontSize="50"
+              fontWeight="800"
+              letterSpacing="0.1em"
+              className="is-active"
+            >
+              <tspan>LOVE LACE</tspan>
+              <tspan x="0" y="50" className="is-active">
+                INNOVATIONS
+              </tspan>
+            </text>
+          </svg>
         </Link>
         <button
           className={`navbar-toggler ${
@@ -73,18 +81,66 @@ const Header = () => {
           id="navbarSupportedContent"
         >
           <ul className="navbar-nav ms-auto mt-3 mt-lg-0">
-            <li className="nav-item">
+            <li className="nav-item dropdown">
               <Link
-                aria-current="page"
-                href="/"
+                href="#"
                 className={
                   router.pathname == "/"
-                    ? "nav-link active mt-1"
-                    : "nav-link mt-1"
+                    ? "nav-link dropdown-toggle active mt-1"
+                    : "nav-link dropdown-toggle mt-1"
                 }
+                role="button"
+                id="navbarDropdownMenuLink"
+                data-mdb-toggle="dropdown" aria-expanded="false"
+                onClick={() => {
+                  setDropDownactive(!dropDownactive);
+              }}
               >
-                Home
+                How we help
               </Link>
+              <ul
+                className="dropdown-menu"
+                aria-labelledby="navbarDropdownMenuLinkRight"
+                style={{ display:  dropDownactive ?  "block" : "none" }}
+              >
+                <li>
+                  <Link className="dropdown-item" href="#">
+                    Action
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" href="#">
+                    Another action
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" href="#">
+                    Submenu &raquo;
+                  </Link>
+                  <ul className="dropdown-menu dropdown-submenu dropdown-submenu-left">
+                    <li>
+                      <Link className="dropdown-item" href="#">
+                        Submenu item 1
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="dropdown-item" href="#">
+                        Submenu item 2
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="dropdown-item" href="#">
+                        Submenu item 4
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="dropdown-item" href="#">
+                        Submenu item 5
+                      </Link>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
             </li>
             <li className="nav-item">
               <Link

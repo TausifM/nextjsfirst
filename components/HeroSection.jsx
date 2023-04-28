@@ -65,7 +65,7 @@ const HeroSection = () => {
                 <div className="item-hints text-center position-absolute z-index-1" onClick={() => setActiveCircle(!activeCircle)}>
                   <div className="hint">
                     <span className="hint-radius"></span>
-                    <span className="hint-dot"></span>
+                    <span className="hint-dot m-0"></span>
                   </div>
                 </div>
                 {activeCircle ? <CircleToolTipContent activeCircle={activeCircle} /> : null}
