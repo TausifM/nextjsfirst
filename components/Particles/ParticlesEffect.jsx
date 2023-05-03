@@ -1,4 +1,4 @@
-import { useCallback } from "react";
+import React, { useCallback } from "react";
 import Particles from "react-particles";
 import { loadFull } from "tsparticles";
 
@@ -90,4 +90,4 @@ const ParticlesEffect = () => {
   )
 }
 
-export default ParticlesEffect
+export default React.memo(ParticlesEffect);

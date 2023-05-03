@@ -32,10 +32,10 @@ const HeroSection = () => {
               <ParticlesEffect />
             </div>
             <div className="col-lg-6 text-center text-lg-start">
-              <p className="m-3 text-600 fs-3 text-muted ms-0 fw-light text-uppercase">
+              <p className="m-3 text-600 fs-3 text-muted ms-0 fw-bold text-uppercase">
                 Welcome to Love Lace Innovations
               </p>
-              <h1 className="text-white fs-5 fs-xl-6 mb-4">
+              <h1 className="text-white fs-5 fs-xl-6 mb-4 fw-bolder">
                 We are a creative group of people who design influential brands
                 and digital experiences.
               </h1>

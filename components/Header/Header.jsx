@@ -1,10 +1,11 @@
-import { useEffect, useState } from "react";
+import React,{ useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import NavbarItems from "./NavbarItems";
+import Logo from "./Logo";
 
 const Header = () => {
   const [navbarCollapse, setNavbarCollapse] = useState(false);
-  const [dropDownactive, setDropDownactive] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const router = useRouter();
   const handleScroll = () => {
@@ -29,39 +30,13 @@ const Header = () => {
   }, []);
   return (
     <nav
-      className={`navbar navbar-expand-lg fixed-top navbar-dark p-3 mt-2 ${
+      className={`navbar navbar-expand-lg fixed-top navbar-dark pt-3 pb-3 mt-2 ${
         isScrolled ? "bg-dark shadow-transition z-index-3" : ""
       } ${navbarCollapse ? "bg-dark z-index-3" : "z-index-3"}`}
       data-navbar-on-scroll="data-navbar-on-scroll"
     >
       <div className="container">
-        <Link href="/" className="d-flex">
-          <div className="logo-container ms-2">
-            <div className="heart"></div>
-          </div>
-          <svg
-            className="text"
-            width="5.8cm"
-            height="2cm"
-            viewBox="130 25 120 160"
-          >
-            <text
-              fill="none"
-              stroke="#fff"
-              transform="translate(3 102)"
-              strokeWidth="3"
-              fontSize="50"
-              fontWeight="800"
-              letterSpacing="0.1em"
-              className="is-active"
-            >
-              <tspan>LOVE LACE</tspan>
-              <tspan x="0" y="50" className="is-active">
-                INNOVATIONS
-              </tspan>
-            </text>
-          </svg>
-        </Link>
+        <Logo />
         <button
           className={`navbar-toggler ${
             navbarCollapse ? "collapsed z-index-1" : ""
@@ -80,103 +55,26 @@ const Header = () => {
           className={`navbar-collapse ${navbarCollapse ? "" : "collapse"}`}
           id="navbarSupportedContent"
         >
-          <ul className="navbar-nav ms-auto mt-3 mt-lg-0">
-            <li className="nav-item dropdown">
-              <Link
-                href="#"
-                className={
-                  router.pathname == "/"
-                    ? "nav-link dropdown-toggle active mt-1"
-                    : "nav-link dropdown-toggle mt-1"
-                }
-                role="button"
-                id="navbarDropdownMenuLink"
-                data-mdb-toggle="dropdown" aria-expanded="false"
-                onClick={() => {
-                  setDropDownactive(!dropDownactive);
-              }}
-              >
-                How we help
-              </Link>
-              <ul
-                className="dropdown-menu"
-                aria-labelledby="navbarDropdownMenuLinkRight"
-                style={{ display:  dropDownactive ?  "block" : "none" }}
-              >
-                <li>
-                  <Link className="dropdown-item" href="#">
-                    Action
-                  </Link>
-                </li>
-                <li>
-                  <Link className="dropdown-item" href="#">
-                    Another action
-                  </Link>
-                </li>
-                <li>
-                  <Link className="dropdown-item" href="#">
-                    Submenu &raquo;
-                  </Link>
-                  <ul className="dropdown-menu dropdown-submenu dropdown-submenu-left">
-                    <li>
-                      <Link className="dropdown-item" href="#">
-                        Submenu item 1
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="dropdown-item" href="#">
-                        Submenu item 2
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="dropdown-item" href="#">
-                        Submenu item 4
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="dropdown-item" href="#">
-                        Submenu item 5
-                      </Link>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
+          <ul className="nav navbar-nav ms-auto mt-3 mt-lg-0">
+            <NavbarItems />
             <li className="nav-item">
               <Link
-                aria-current="page"
-                href="/about"
-                className={
-                  router.pathname == "/about"
-                    ? "nav-link active mt-1"
-                    : "nav-link mt-1"
-                }
+                href="tel:+919975767561"
+                className="nav-link"
+                style={{fontSize: '1.11rem', fontFamily: "Manrope"}}
               >
-                About
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                aria-current="page"
-                href="/contact"
-                className={
-                  router.pathname == "/contact"
-                    ? "nav-link active mt-1"
-                    : "nav-link mt-1"
-                }
-              >
-                Contact
+                +91 9975767561
               </Link>
             </li>
             <li className="nav-item mt-2 mt-lg-0">
               <Link
-                className="nav-Link btn btn-light text-black w-md-25 w-50 w-lg-100"
+                className="nav-link btn btn-light text-black w-md-25 w-50 w-lg-100"
                 aria-current="page"
-                href="/"
+                href="/contact"
               >
-                Log In
+                Contact Us
               </Link>
-            </li>
+            </li> 
           </ul>
         </div>
       </div>
@@ -184,4 +82,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default React.memo(Header);
