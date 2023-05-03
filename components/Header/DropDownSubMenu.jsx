@@ -6,7 +6,6 @@ const DropDownSubMenu = ({ title, subMenu, link }) => {
     const handleToggle = () => {
         return setSubMenuActive(!subMenuActive);
     }
-    console.log(subMenu, subMenu?.length, "xxec r")
     return (
         <li className="dropdown-submenu" style={{ fontSize: "1.111rem", fontFamily: 'Manrope'}}>
             <Link className="dropdown-item text-white" href={link} onClick={handleToggle} >
