@@ -1,4 +1,4 @@
-// import { useState } from 'react';
+import React from 'react';
 import DropDownSubMenu from './DropDownSubMenu';
 import { menuData } from './menuContent';
 const NavbarItems = () => {
@@ -6,9 +6,10 @@ const NavbarItems = () => {
     return (
         <>
             {menuData.map((row) => {
-                return (<li className={`nav-item dropdown `} key={row.heading} >
+                return (
+                <li className={`nav-item dropdown `} key={row.heading}>
                     <h5
-                        className="nav-link dropdown-toggle mt-1"
+                        className="nav-link dropdown-toggle"
                         role="button"
                         id="navbarDropdownMenuLink"
                         data-mdb-toggle="dropdown"
@@ -27,7 +28,7 @@ const NavbarItems = () => {
                     >
                         {row.content.map((item) => {
                             return (
-                                <DropDownSubMenu title={item.name} key={item.name} link={item.link} />
+                                <DropDownSubMenu title={item.name} key={item.name} subMenu={item.subMenuContent} link={item.link} />
                             );
                         })}
                     </ul>
@@ -37,4 +38,4 @@ const NavbarItems = () => {
     )
 };
 
-export default NavbarItems;
+export default React.memo(NavbarItems);

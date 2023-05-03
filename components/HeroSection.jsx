@@ -44,13 +44,13 @@ const HeroSection = () => {
                   href="/contact"
                   className="custom-btn btn-14 mb-3 w-75 text-uppercase"
                 >
-                  Start a project
+                  Start Project Now
                 </Link>
                 <Link
                   href="/about"
                   className="btn btn-outline-light mb-3 w-75 text-uppercase text-muted"
                 >
-                  More about us
+                  More About Us
                 </Link>
               </div>
             </div>

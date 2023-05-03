@@ -1,13 +1,11 @@
 import React,{ useEffect, useState } from "react";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import NavbarItems from "./NavbarItems";
 import Logo from "./Logo";
 
 const Header = () => {
   const [navbarCollapse, setNavbarCollapse] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const router = useRouter();
   const handleScroll = () => {
     const scrollTop = window.pageYOffset;
     if (scrollTop > 10) {
@@ -63,7 +61,7 @@ const Header = () => {
                 className="nav-link"
                 style={{fontSize: '1.11rem', fontFamily: "Manrope"}}
               >
-                +91 9975767561
+                (+91) 99757-67561
               </Link>
             </li>
             <li className="nav-item mt-2 mt-lg-0">

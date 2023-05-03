@@ -1,22 +1,28 @@
 import Link from 'next/link'
 import { useState } from 'react'
 
-const DropDownSubMenu = ({title, name, link}) => {
+const DropDownSubMenu = ({ title, subMenu, link }) => {
     const [subMenuActive, setSubMenuActive] = useState(false);
     const handleToggle = () => {
         return setSubMenuActive(!subMenuActive);
     }
+    console.log(subMenu, subMenu?.length, "xxec r")
     return (
-        <li className="dropdown-submenu">
-            <Link className="dropdown-item text-black" href="#" onClick={handleToggle} >
+        <li className="dropdown-submenu" style={{ fontSize: "1.111rem" }}
+        >
+            <Link className="dropdown-item text-white" href={link} onClick={handleToggle} >
                 {title} &raquo;
             </Link>
-            <ul className={`dropdown-menu mt-2 ${subMenuActive ? 'd-block' : ''}`}>
-                <li className="dropdown-submenu">
-                        <Link className="dropdown-item" href={link} >
-                            {name}
+            <ul className={`dropdown-menu  ${subMenuActive ? 'd-block' : ''}`}>
+                {subMenu !== undefined ? subMenu.map((item, index) => (
+                    <li className="dropdown-submenu" key={index}>
+                        <Link className="dropdown-item text-white" href={item.link} 
+                        style={{ fontSize: "1.111rem" }}
+                        >
+                            {item.sname}
                         </Link>
-                </li>
+                    </li>
+                )) : null}
             </ul>
         </li>
     )
