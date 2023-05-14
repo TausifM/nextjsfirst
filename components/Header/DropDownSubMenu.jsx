@@ -1,14 +1,19 @@
 import Link from 'next/link'
 import { useState } from 'react'
 
-const DropDownSubMenu = ({ title, subMenu, link }) => {
+const DropDownSubMenu = ({ handleSelectedHeading, title, subMenu, link }) => {
     const [subMenuActive, setSubMenuActive] = useState(false);
-    const handleToggle = () => {
-        return setSubMenuActive(!subMenuActive);
-    }
+    // const handleToggle = () => {
+    //     return setSubMenuActive(!subMenuActive);
+    // }
     return (
         <li className="dropdown-submenu ps-2 pe-2 pt-3 pb-3" style={{ fontSize: "1.111rem", fontFamily: 'Manrope'}}>
-            <Link className="dropdown-item text-white" href={link} onClick={handleToggle} >
+            <Link className="dropdown-item text-white" href={link} 
+                onClick={() => {
+                setSubMenuActive(!subMenuActive);
+                handleSelectedHeading(title);
+                }}
+                >
                 {title} &raquo;
             </Link>
             <ul className={`dropdown-menu  ${subMenuActive ? 'd-block' : ''}`}>

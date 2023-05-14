@@ -58,13 +58,12 @@ const HeroSection = () => {
               <div className="p-0 d-flex justify-content-center align-content-center">
                 <Canvas
                   camera={{ position: [0.0, 0.0, 3.5] }}
-                  style={{ height: "450px", padding: "10px", position: "relative" }}
+                  style={{ height: "450px", position: "relative" }}
                 >
                   <Blob />
                 </Canvas>
                 <div className="item-hints text-center position-absolute z-index-1" onClick={() => setActiveCircle(!activeCircle)}>
                   <div className="hint">
-                    <span className="hint-radius"></span>
                     <span className="hint-dot m-0"></span>
                   </div>
                 </div>
