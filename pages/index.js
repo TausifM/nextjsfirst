@@ -12,6 +12,7 @@ import AccordionSection from "../components/AccordionSection";
 import Blogs from "../components/Blogs";
 import LogoDesign from "../components/LogoDesign";
 import AmazonEbook from "../components/AmazonEbook";
+import FirstTestimonials from "../components/Testimonials/FirstTestimonials";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <HeroSection />
+        <FirstTestimonials />
         <WebDesignServices />
         <SEOServices />
         <LogoDesign />

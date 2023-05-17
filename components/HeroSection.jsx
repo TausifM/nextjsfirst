@@ -13,7 +13,7 @@ const Blob = dynamic(() => import("./Blob"), { ssr: false });
 const HeroSection = () => {
   const [activeCircle, setActiveCircle] = useState(false);
   return (
-    <div className="bg-dark">
+    <section className="bg-dark">
       <Image
         className="img-fluid hero-img position-absolute end-0"
         src={BgImg}
@@ -58,7 +58,7 @@ const HeroSection = () => {
               <div className="p-0 d-flex justify-content-center align-content-center">
                 <Canvas
                   camera={{ position: [0.0, 0.0, 3.5] }}
-                  style={{ height: "450px", position: "relative" }}
+                  style={{ height: "450px", padding: "10px", position: "relative" }}
                 >
                   <Blob />
                 </Canvas>
@@ -74,7 +74,7 @@ const HeroSection = () => {
           <LogoSlider />
         </div>
       </section>
-    </div>
+    </section>
   );
 };
 
