@@ -1,43 +1,50 @@
+import Image from "next/image";
+import { IMAGES } from "../../asset";
+
 
 const FirstTestimonials = () => {
     return (
-        <section className="container flex-grow-1 container-p-y">
-            <div className="row mb-5">
-                <div className="col-md-6 col-lg-4 mb-3">
-                    <div className="card h-100">
-                        {/* <img className="card-img-top" src="../assets/img/elements/2.jpg" alt="Card image cap"> */}
-                        <div className="card-body">
+        <section className="container flex-grow-1 container-p-y bg-white pt-5 rounded-2 pb-5">
+            <div className="row">
+                <div className="col-md-9 col-lg-4">
+                    <div className="row">
+                        <div className="testimonial-container p-4 d-flex"> 
+                       <Image className="card-img card-img-left" src={IMAGES.PawanBatghare} alt="Card image" style={{ borderRadius: "50%", height: "fit-content"}}/>
+                       <div className="card-body p-2">
                             <h5 className="card-title">Card title</h5>
                             <p className="card-text">
                                 Some quick example text to build on the card title and make up the bulk of the card's content.
                             </p>
-                            <a href="javascript:void(0)" className="btn btn-outline-primary">Go somewhere</a>
+                            {/* <a href="javascript:void(0)" className="btn btn-outline-primary">Go somewhere</a> */}
+                        </div>
                         </div>
                     </div>
                 </div>
-                <div className="col-md-6 col-lg-4 mb-3">
-                    <div className="card h-100">
-                        <div className="card-body">
+                <div className="col-md-9 col-lg-4">
+                    <div className="row">
+                        <div className="testimonial-container p-4 d-flex"> 
+                       <Image className="card-img card-img-left" src={IMAGES.PawanBatghare} alt="Card image" style={{ borderRadius: "50%", height: "fit-content"}}/>
+                       <div className="card-body p-2">
                             <h5 className="card-title">Card title</h5>
-                            <h6 className="card-subtitle text-muted">Support card subtitle</h6>
+                            <p className="card-text">
+                                Some quick example text to build on the card title and make up the bulk of the card's content.
+                            </p>
+                            {/* <a href="javascript:void(0)" className="btn btn-outline-primary">Go somewhere</a> */}
                         </div>
-                        {/* <img className="img-fluid" src="../assets/img/elements/13.jpg" alt="Card image cap"> */}
-                        <div className="card-body">
-                            <p className="card-text">Bear claw sesame snaps gummies chocolate.</p>
-                            {/* <a href="javascript:void(0);" className="card-link">Card link</a>
-                            <a href="javascript:void(0);" className="card-link">Another link</a> */}
                         </div>
                     </div>
                 </div>
-                <div className="col-md-6 col-lg-4 mb-3">
-                    <div className="card h-100">
-                        <div className="card-body">
+                <div className="col-md-9 col-lg-4">
+                    <div className="row">
+                        <div className="testimonial-container p-4 d-flex"> 
+                       <Image className="card-img card-img-left" src={IMAGES.PawanBatghare} alt="Card image" style={{ borderRadius: "50%", height: "fit-content"}}/>
+                       <div className="card-body p-2">
                             <h5 className="card-title">Card title</h5>
-                            <h6 className="card-subtitle text-muted">Support card subtitle</h6>
-                            {/* <img className="img-fluid d-flex mx-auto my-4" src="../assets/img/elements/4.jpg" alt="Card image cap"> */}
-                            <p className="card-text">Bear claw sesame snaps gummies chocolate.</p>
-                            {/* <a href="javascript:void(0);" className="card-link">Card link</a>
-                            <a href="javascript:void(0);" className="card-link">Another link</a> */}
+                            <p className="card-text">
+                                Some quick example text to build on the card title and make up the bulk of the card's content.
+                            </p>
+                            {/* <a href="javascript:void(0)" className="btn btn-outline-primary">Go somewhere</a> */}
+                        </div>
                         </div>
                     </div>
                 </div>

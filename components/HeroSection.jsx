@@ -13,7 +13,7 @@ const Blob = dynamic(() => import("./Blob"), { ssr: false });
 const HeroSection = () => {
   const [activeCircle, setActiveCircle] = useState(false);
   return (
-    <section className="bg-dark">
+    <section className="bg-dark pb-3">
       <Image
         className="img-fluid hero-img position-absolute end-0"
         src={BgImg}

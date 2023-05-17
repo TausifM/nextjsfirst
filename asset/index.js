@@ -28,4 +28,6 @@ export const IMAGES = {
     Blog5: require("./img/blog/5.png"),
     Blog6: require("./img/blog/6.png"),
     SEOImg: require("./img/seo/seo.jpg"),
+    PawanBatghare: require("./img/testimonials/pawanbatghare.jpg"),
+    RahulDharaskar: require("./img/testimonials/dharaskarrahul.jpg")
 }

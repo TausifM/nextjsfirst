@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;500&display=swap');
 
 :root {
-  --fg-font-sans-serif: "Manrope", 'Gilroy-Bold', "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --fg-font-sans-serif: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --fg-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --fg-body-font-family: "Manrope", "Gilroy-Bold", Open Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
   --fg-body-font-size: 1rem;
@@ -21783,3 +21783,35 @@ color: #fff;
 }
 
 /* end circle content */
+
+/* Start Card Image */
+@media(min-width: 280px) {
+  .testimonial-container > img {
+    width: 65px !important;
+    padding: 0px;
+
+  }
+}
+
+@media(min-width: 720px) {
+
+  .testimonial-container > img {
+    width: 75px !important
+  }
+}
+
+@media(min-width: 992px) {
+  .testimonial-container > img {
+    width: 75px !important
+  }
+}
+
+@media(min-width: 1140px) {
+
+  .testimonial-container > img {
+    width: 85px !important
+  }
+}
+.card-title {
+  margin-bottom: 0.875rem;
+}
