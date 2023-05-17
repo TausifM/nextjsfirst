@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { useState } from 'react'
 
-const DropDownSubMenu = ({ handleSelectedHeading, title, subMenu, link }) => {
+const DropDownSubMenu = ({ title, subMenu, link}) => {
     const [subMenuActive, setSubMenuActive] = useState(false);
     // const handleToggle = () => {
     //     return setSubMenuActive(!subMenuActive);
@@ -11,7 +11,7 @@ const DropDownSubMenu = ({ handleSelectedHeading, title, subMenu, link }) => {
             <Link className="dropdown-item text-white" href={link} 
                 onClick={() => {
                 setSubMenuActive(!subMenuActive);
-                handleSelectedHeading(title);
+                // handleSelectedHeading(title);
                 }}
                 >
                 {title} &raquo;

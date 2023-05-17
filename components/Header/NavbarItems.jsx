@@ -1,20 +1,20 @@
 import React, { useState } from 'react';
 import DropDownSubMenu from './DropDownSubMenu';
 import { menuData } from './menuContent';
+import { Fragment } from 'react';
 const NavbarItems = () => {
     const [dropDownactive, setDropDownactive] = useState(false);
-    const [selectedHeading, setSelectedHeading] = useState(null);
-    const handleSelectedHeading = (heading) => {
-        console.log(heading, "header")
-        setSelectedHeading(heading);
-    }
+    // const [selectedHeading, setSelectedHeading] = useState(null);
+    // const handleSelectedHeading = (heading) => {
+    //     console.log(heading, "header")
+    //     setSelectedHeading(heading);
+    // }
 
-    console.log(selectedHeading, "ddfvs", )
     return (
         <>
-            {menuData.map((row) => {
+            {menuData.map((row, index) => {
                 return (
-                    <li className={`nav-item dropdown `} key={row.heading}>
+                    <li className={`nav-item dropdown `} key={index}>
                         <h5
                             className="nav-link dropdown-toggle"
                             role="button"
@@ -35,14 +35,17 @@ const NavbarItems = () => {
                         >{row.content
                             // .filter((item) => item.name === selectedHeading)
                             // .flatMap((item) => item.subMenuContent)
-                            .map((subItem) => {
+                            .map((subItem, index) => {
                                 return (
-                                    <DropDownSubMenu
+                                    <Fragment key={index}>
+                                       <DropDownSubMenu
                                         // handleSelectedHeading={handleSelectedHeading()}
                                         title={subItem.name}
                                         subMenu={subItem.subMenuContent}
                                         link={subItem.link}
-                                    />
+                                        /> 
+                                    </Fragment>
+                                    
                                 );
                             })}
                         </ul>
